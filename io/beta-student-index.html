@@ -6,8 +6,8 @@
     <title>出校申报</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
     <meta name="format-detection" content="telephone=no" />
-    <link rel="stylesheet" href="https://ygj.gduf.edu.cn/leavehelper_20220228/css/mui.min.css">
-    <link rel="stylesheet" type="text/css" href="https://ygj.gduf.edu.cn/leavehelper_20220228/css/app.css" />
+    <link rel="stylesheet" href="css/mui.min.css">
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
     <style>
         .footerBtnBox {
             padding: 10px;
@@ -26,17 +26,17 @@
             transition: all 0.3s;
         }
 
-        .mui-card-footer.footerBtnBox .mui-card-link:last-child {
-            background: #EA5628
-        }
+            .mui-card-footer.footerBtnBox .mui-card-link:last-child {
+                background: #EA5628
+            }
 
-        .mui-card-footer.footerBtnBox .mui-card-link:last-child:active {
-            background: #CF2D28
-        }
+                .mui-card-footer.footerBtnBox .mui-card-link:last-child:active {
+                    background: #CF2D28
+                }
 
-        .mui-card-footer.footerBtnBox .mui-card-link:active {
-            background: #007AFF;
-        }
+            .mui-card-footer.footerBtnBox .mui-card-link:active {
+                background: #007AFF;
+            }
     </style>
 </head>
 
@@ -47,15 +47,19 @@
     </div>
 
     <nav class="footerNav">
-        <button class="whiteBtn"><span class="mui-icon mui-icon-more"></span>
-            <span>申请记录</span></button>
-        <button><span class="mui-icon mui-icon-compose"></span>
-            <span>出校申报</span></button>
+        <button class="whiteBtn">
+            <span class="mui-icon mui-icon-more"></span>
+            <span>申请记录</span>
+        </button>
+        <button>
+            <span class="mui-icon mui-icon-compose"></span>
+            <span>出校申报</span>
+        </button>
     </nav>
 
-    <script src="https://ygj.gduf.edu.cn/leavehelper_20220228/js/mui.min.js"></script>
-    <script src="https://ygj.gduf.edu.cn/leavehelper_20220228/js/jquery.min.js"></script>
-    <script src="https://ygj.gduf.edu.cn/leavehelper_20220228/js/common.js"></script>
+    <script src="js/mui.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+ 
 
     <script>
         function getParam() {
@@ -73,6 +77,9 @@
                     };
                     if (strs[i].indexOf("studentSex=") != -1) {
                         info['studentSex'] = decodeURIComponent(strs[i].replace("studentSex=", ""));
+                    };
+                    if (strs[i].indexOf("outType=") != -1) {
+                        info['outType'] = decodeURIComponent(strs[i].replace("outType=", ""));
                     };
                 };
                 return info;
@@ -101,11 +108,11 @@
                         "sex": getParam()["studentSex"],
                         "name": getParam()["studentName"],
                         "submitDate": new Date(new Date().getTime() - 14400000).Format("yyyy/MM/dd hh:mm:ss"),
-                        "passNum": "共一次出入",
+                        "passNum": "每天出入一次",
                         "days": "3",
                         "status": "1",
                         "otherOutType": "",
-                        "outType": "实习",
+                        "outType": getParam()["outType"],
                         "startDate": new Date().Format("yyyy/MM/dd hh:mm:ss"),
                         "endDate": new Date(new Date().getTime() + 259200000).Format("yyyy/MM/dd hh:mm:ss")
                     }
@@ -113,6 +120,7 @@
                 "code": 0
             };
             var html = '';
+            var strs = location.search;
             for (var i = 0; i < result.data.length; i++) {
                 html += '<div class="mui-card">';
                 html += '<div class="mui-card-header">申请编号：' + result.data[i].outSchoolID + '</div>';
@@ -130,7 +138,7 @@
                 html += '</div>';
                 html += '</div>';
                 html += '<div class="mui-card-footer footerBtnBox">';
-                html += '<a class="mui-card-link" href="student-detail.html?studentName=' + getParam()['studentName'] + "&studentId=" + getParam()['studentId'] + "&studentSex=" + getParam()['studentSex'] + '">详情</a>';
+                html += '<a class="mui-card-link" href="beta-detail.html' + strs +'"' + '>详情</a>';
                 if (result.data[i].status == 0)
                     html += '<a class="mui-card-link" >取消</a>';
                 else {
