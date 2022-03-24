@@ -115,6 +115,34 @@
                         "outType": getParam()["outType"],
                         "startDate": new Date().Format("yyyy/MM/dd hh:mm:ss"),
                         "endDate": new Date(new Date().getTime() + 259200000).Format("yyyy/MM/dd hh:mm:ss")
+                    },
+                    {
+                        "outSchoolID": new Date(new Date().getTime() - 86400000 - 3612345).Format("yyyyMMdd" + randomNum),
+                        "studentID": getParam()["studentId"],
+                        "sex": getParam()["studentSex"],
+                        "name": getParam()["studentName"],
+                        "submitDate": new Date(new Date().getTime() - 86400000 - 14400000-3612345).Format("yyyy/MM/dd hh:mm:ss"),
+                        "passNum": "共一次出入",
+                        "days": "1",
+                        "status": "1",
+                        "otherOutType": "",
+                        "outType": "收寄快递（1小时有效）",
+                        "startDate": new Date(new Date().getTime() - 86400000-3612345).Format("yyyy/MM/dd hh:mm:ss"),
+                        "endDate": new Date(new Date().getTime() - 86400000 + 3600000).Format("yyyy/MM/dd hh:mm:ss")
+                    },
+                    {
+                        "outSchoolID": new Date(new Date().getTime() - 86400000 * 2 - 3612345).Format("yyyyMMdd" + randomNum),
+                        "studentID": getParam()["studentId"],
+                        "sex": getParam()["studentSex"],
+                        "name": getParam()["studentName"],
+                        "submitDate": new Date(new Date().getTime() - 86400000 * 2 - 14400000 - 3612345).Format("yyyy/MM/dd hh:mm:ss"),
+                        "passNum": "共一次出入",
+                        "days": "1",
+                        "status": "1",
+                        "otherOutType": "",
+                        "outType": "收寄快递（1小时有效）",
+                        "startDate": new Date(new Date().getTime() - 86400000 * 2 - 3612345).Format("yyyy/MM/dd hh:mm:ss"),
+                        "endDate": new Date(new Date().getTime() - 86400000 * 2 + 3600000 - 3612345).Format("yyyy/MM/dd hh:mm:ss")
                     }
                 ],
                 "code": 0
