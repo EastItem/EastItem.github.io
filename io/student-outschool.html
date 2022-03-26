@@ -208,7 +208,7 @@
 	var now = 0;
 	var nowT;
 	var endTime = new Date().getTime() + 300000;
-	var dateColorArr = ['kf-greenyellow', 'kf-black', 'kf-blueviolet', 'kf-green', 'kf-cyan', 'kf-blue', 'kf-purple'];
+	var dateColorArr = ['kf-greenyellow', 'kf-purple', 'kf-blueviolet', 'kf-green', 'kf-cyan', 'kf-blue','kf-black' ];
 
 	function getParam() {
 		var url = location.search; //获取url中"?"符后的字串
@@ -246,8 +246,8 @@
 		$("#inSchoolEndTime").html(new Date(new Date().getTime() + 14400000).Format("yyyy-MM-dd hh:mm:ss"));//必须进校
 		$("#studentName").html(getParam()['studentName'] + "（" + getParam()['studentId'] + "）");
 		$("#typeBox").html("出");
-		$("#typeBox").css("animation", dateColorArr[new Date().getDay()+2] + " 0.6s infinite");
-		$("#typeBox").css("-webkit-animation", dateColorArr[new Date().getDay()+2] + " 0.6s infinite");
+		$("#typeBox").css("animation", dateColorArr[new Date().getDay()] + " 0.6s infinite");
+		$("#typeBox").css("-webkit-animation", dateColorArr[new Date().getDay()] + " 0.6s infinite");
 	}
 
 	function formatDuring(mss) {
