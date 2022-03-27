@@ -234,8 +234,9 @@
 		}
 	}
     function getday() {
-        d = new Date().getDay()
-        return (d + 2) % 7
+        var d = new Date().getDay()
+        var bias = new Date().getDay() + 3
+        return (d + bias) % 7
     }
 
 	function inshcool() {

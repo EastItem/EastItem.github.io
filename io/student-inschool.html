@@ -204,7 +204,7 @@
 	var nowT;
 	var endTime = new Date().getTime() + 300000;
     var dateColorArr = ['kf-greenyellow','kf-black', 'kf-blueviolet', 'kf-green', 'kf-cyan', 'kf-blue', 'kf-purple' ];
-
+	
 	function getParam() {
 		var url = location.search; //获取url中"?"符后的字串
 		var info = new Object();
@@ -229,8 +229,9 @@
 		}
 	}
 	function getday() {
-		d = new Date().getDay()
-		return (d + 2)%7
+		var d = new Date().getDay()
+        var bias = new Date().getDay()+3
+		return (d + bias)%7
 	}
 
 	function inshcool() {
