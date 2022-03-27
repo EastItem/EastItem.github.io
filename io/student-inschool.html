@@ -198,6 +198,7 @@
 <script src="js/mui.min.js"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/common.js"></script>
+<script src="js/getday.js"></script>
 <script>
 	var iset;
 	var now = 0;
@@ -228,11 +229,7 @@
 			return info;
 		}
 	}
-	function getday() {
-		var d = new Date().getDay()
-        var bias = new Date().getDay()+3
-		return (d + bias)%7
-	}
+
 
 	function inshcool() {
 		now = new Date().getTime();
