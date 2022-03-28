@@ -12,7 +12,7 @@ function outshcool() {
         $("#remainingTime").html("该凭证<b>" + formatDuring(s) + "</b>后将失效，请尽快出校")
     }, 1000);
     $("#startTime").html(new Date().Format("yyyy-MM-dd"));
-    // 出校 $("#inSchoolEndTime").html(new Date(new Date().getTime() + 14400000).Format("yyyy-MM-dd hh:mm:ss"));
+     $("#inSchoolEndTime").html(new Date(new Date().getTime() + 14400000).Format("yyyy-MM-dd hh:mm:ss"));
      $("#studentName").html(getParam()['studentName'] + "（" + getParam()['studentId'] + "）");
     $("#typeBox").html("出");
     //$("#typeBox").css("animation", dateColorArr[getday()] + " 0.6s infinite");
