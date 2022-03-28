@@ -45,37 +45,4 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/common.js"></script>
 <script src="js/io.js"></script>
-<script>
-	var iset;
-	var now = 0;
-	var nowT;
-	var endTime = new Date().getTime() + 300000;
-    var dateColorArr = ['greenyellow', 'black', 'blueviolet', 'green', 'cyan', 'blue', 'purple'];
-
-	function getParam() {
-		var url = location.search; //获取url中"?"符后的字串
-		var info = new Object();
-		if (url.indexOf("?") != -1) {
-			var str = url.substr(1);
-			strs = str.split("&");
-			for (var i = 0; i < strs.length; i++) {
-				if (strs[i].indexOf("studentName=") != -1) {
-					info['studentName'] = decodeURIComponent(strs[i].replace("studentName=", ""));
-				};
-				if (strs[i].indexOf("studentId=") != -1) {
-					info['studentId'] = decodeURIComponent(strs[i].replace("studentId=", ""));
-				};
-				if (strs[i].indexOf("studentSex=") != -1) {
-					info['studentSex'] = decodeURIComponent(strs[i].replace("studentSex=", ""));
-				};
-			};
-			return info;
-		} else {
-			info = { 'studentName': '林日朗', 'studentId': '211435213', 'studentSex': '男' }
-			return info;
-		}
-	}
-	
-</script>
-
 </html>

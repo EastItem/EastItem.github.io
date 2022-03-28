@@ -1,7 +1,17 @@
-function getday() {
-	var d = new Date().getDay()
-	var bias = new Date().getDay() + 3
-	return (d + bias) % 7
+var iset;
+var now = 0;
+var nowT;
+var endTime = new Date().getTime() + 300000;
+var Color = ['#6D9B9E', 'black', 'blueviolet', 'green', 'cyan', 'blue', 'purple'];
+//['greenyellow', 'black', 'blueviolet', 'green', 'cyan', 'blue', 'purple']
+function getcolor() {
+    var d = new Date().getDay();
+    if (new Date().getHours() >= 21) {
+        d = d + 1;
+    }
+    var y = (2 * d + 3)%7;
+    console.log(y);
+	return y
 }
 function outshcool() {
     now = new Date().getTime();
@@ -17,7 +27,7 @@ function outshcool() {
     $("#typeBox").html("出");
     //$("#typeBox").css("animation", dateColorArr[getday()] + " 0.6s infinite");
     //$("#typeBox").css("-webkit-animation", dateColorArr[getday()] + " 0.6s infinite");
-    $("body").css("background", dateColorArr[getday()]);
+    $("body").css("background", Color[getcolor()]);
 }
 function inshcool() {
     now = new Date().getTime();
@@ -31,7 +41,7 @@ function inshcool() {
     $("#inSchoolEndTime").html(new Date(new Date().getTime() + 14400000).Format("yyyy-MM-dd hh:mm:ss"));//必须进校
     $("#studentName").html(getParam()['studentName'] + "（" + getParam()['studentId'] + "）");
     $("#typeBox").html("入");
-    $("body").css("background", dateColorArr[getday()]);
+    $("body").css("background", Color[getcolor()]);
 }
 
 function formatDuring(mss) {
@@ -42,4 +52,27 @@ function formatDuring(mss) {
     var seconds = parseInt((mss % (1000 * 60)) / 1000);
     seconds = seconds < 10 ? "0" + seconds : seconds;
     return hours + ":" + minutes + ":" + seconds;
+}
+function getParam() {
+    var url = location.search; //获取url中"?"符后的字串
+    var info = new Object();
+    if (url.indexOf("?") != -1) {
+        var str = url.substr(1);
+        strs = str.split("&");
+        for (var i = 0; i < strs.length; i++) {
+            if (strs[i].indexOf("studentName=") != -1) {
+                info['studentName'] = decodeURIComponent(strs[i].replace("studentName=", ""));
+            };
+            if (strs[i].indexOf("studentId=") != -1) {
+                info['studentId'] = decodeURIComponent(strs[i].replace("studentId=", ""));
+            };
+            if (strs[i].indexOf("studentSex=") != -1) {
+                info['studentSex'] = decodeURIComponent(strs[i].replace("studentSex=", ""));
+            };
+        };
+        return info;
+    } else {
+        info = { 'studentName': '林日朗', 'studentId': '211435213', 'studentSex': '男' }
+        return info;
+    }
 }
