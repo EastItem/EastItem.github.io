@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="GBK">
-    <title>—’…´—°‘Ò</title>
+    <meta charset="UTF-8">
+    <title>È¢úËâ≤ÈÄâÊã©</title>
     <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
     <meta content="yes" name="apple-mobile-web-app-capable" />
     <meta content="black" name="apple-mobile-web-app-status-bar-style" />
@@ -18,16 +18,16 @@
     </style>
     <script>
         var color = "#000000";
-        var strs = location.search; //ªÒ»°url÷–"?"∑˚∫Ûµƒ◊÷¥Æ
+        var strs = location.search; //Ëé∑Âèñurl‰∏≠"?"Á¨¶ÂêéÁöÑÂ≠ó‰∏≤
         function change(v) {
             document.getElementById("colorout").bgColor = v
-            document.getElementById("colorchoose").value=v
+            document.getElementById("colorchoose").value = v
         }
         function check(v) {
             color = v;
         }
         function go() {
-            window.location.href = "beta-default.html?" + strs+'&color='+color
+            window.location.href = "beta-default.html" + strs + '&color=' + color
         }
     </script>
 </head>
@@ -36,7 +36,7 @@
     <section class="aui-flexView">
         <header class="aui-navBar aui-navBar-fixed">
             <div class="aui-center">
-                <span class="aui-center-title">—’…´—°‘Ò</span>
+                <span class="aui-center-title">È¢úËâ≤ÈÄâÊã©</span>
             </div>
         </header>
         <section class="aui-scrollView">
@@ -46,69 +46,69 @@
                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                             <tbody>
                                 <tr style="height:100px">
-                                    <th style="border: 1px solid #f5f5f5; background-color: cyan;">—°‘Ò</th>
-                                    <th style="border: 1px solid #f5f5f5; background-color: cyan;">÷–Œƒ√˚</th>
-                                    <th style="border: 1px solid #f5f5f5; background-color: cyan;">¥˙¬Î</th>
-                                    <th style="border: 1px solid #f5f5f5; background-color: cyan;">—’…´</th>
+                                    <th style="border: 1px solid #f5f5f5; background-color: cyan;">ÈÄâÊã©</th>
+                                    <th style="border: 1px solid #f5f5f5; background-color: cyan;">‰∏≠ÊñáÂêç</th>
+                                    <th style="border: 1px solid #f5f5f5; background-color: cyan;">‰ª£Á†Å</th>
+                                    <th style="border: 1px solid #f5f5f5; background-color: cyan;">È¢úËâ≤</th>
                                 </tr>
                                 <tr style="height:100px">
                                     <td><input name="bgcolor" type="radio" value="#000000" onclick="check(this.value)"></td>
-                                    <td>∫⁄…´</td>
+                                    <td>ÈªëËâ≤</td>
                                     <td class="bgtxt">#000000</td>
                                     <td class="cursor" bgcolor="#000000"></td>
                                 </tr>
                                 <tr style="height:100px">
                                     <td><input name="bgcolor" type="radio" value="#007C00" onclick="check(this.value)"></td>
-                                    <td>…Ó¬Ã∫Ï</td>
+                                    <td>Ê∑±ÁªøÁ∫¢</td>
                                     <td class="bgtxt">#007C00</td>
                                     <td class="cursor" bgcolor="#007C00"></td>
                                 </tr>
                                 <tr style="height:100px">
                                     <td><input name="bgcolor" type="radio" value="#8B2BE4" onclick="check(this.value)"></td>
-                                    <td>◊œ…´</td>
+                                    <td>Á¥´Ëâ≤</td>
                                     <td class="bgtxt">#8B2BE4</td>
                                     <td class="cursor" bgcolor="#8B2BE4"></td>
                                 </tr>
                                 <tr style="height:100px">
-                                    <td><input name="bgcolor" type="radio"  value="#6D9B9E" onclick="check(this.value)"></td>
-                                    <td>¬Ãª“…´</td>
+                                    <td><input name="bgcolor" type="radio" value="#6D9B9E" onclick="check(this.value)"></td>
+                                    <td>ÁªøÁÅ∞Ëâ≤</td>
                                     <td class="bgtxt">#6D9B9E</td>
                                     <td class="cursor" bgcolor="#6D9B9E"></td>
                                 </tr>
                                 <tr style="height:100px">
                                     <td><input name="bgcolor" type="radio" value="#0000FF" onclick="check(this.value)"></td>
-                                    <td>…Ó¿∂…´</td>
+                                    <td>Ê∑±ËìùËâ≤</td>
                                     <td class="bgtxt">#0000FF</td>
                                     <td class="cursor" bgcolor="#0000FF"></td>
                                 </tr>
                                 <tr style="height:100px">
                                     <td><input name="bgcolor" type="radio" value="#731279" onclick="check(this.value)"></td>
-                                    <td>…Ó◊œ…´</td>
+                                    <td>Ê∑±Á¥´Ëâ≤</td>
                                     <td class="bgtxt">#731279</td>
                                     <td class="cursor" bgcolor="#731279"></td>
                                 </tr>
                                 <tr style="height:100px">
-                                    <td><input name="bgcolor" type="radio" id ="colorchoose"value="#fff"  onclick="check(this.value)"></td>
-                                    <td>◊‘—°</td>
-                                    <td> <input type="text" class="aui-code-line-input" placeholder="»Áπ˚π¥—°◊‘—°«Î ‰»Î—’…´"style="width:100%;height:100%" id="colorinput" onchange="change(this.value)"/></td>
+                                    <td><input name="bgcolor" type="radio" id="colorchoose" value="#fff" onclick="check(this.value)"></td>
+                                    <td>Ëá™ÈÄâ</td>
+                                    <td> <input type="text" class="aui-code-line-input" placeholder="Â¶ÇÊûúÂãæÈÄâËá™ÈÄâËØ∑ËæìÂÖ•È¢úËâ≤" style="width:100%;height:100%" id="colorinput" onchange="change(this.value)" /></td>
                                     <td class="coloroutput" bgcolor="#fff" id="colorout"></td>
                                 </tr>
 
                             </tbody>
                         </table>
-                   
+
 
 
 
                         <div class="aui-code-btn">
-                            <button type="button" onClick="go()" id="bt1">Ω¯»Î“≥√Ê</button>
+                            <button type="button" onClick="go()" id="bt1">ËøõÂÖ•È°µÈù¢</button>
                         </div>
-</form>
+                </form>
             </div>
         </section>
     </section>
 
-   
+
 </body>
 
 </html>
