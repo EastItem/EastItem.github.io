@@ -187,7 +187,7 @@
             var txt = '<p style="color:red">出校凭证有效时间仅5分钟，请确定你已在校门附近准备出校？</p>';
             var btnArray = ['是', '否'];
             mui.confirm(txt, '<p style="color:red;font-weight:bold">重要提示！！！</p>', btnArray, function (e) {
-                window.location.href = "student-outschool.html?studentName=" + getParam()['studentName'] + "&studentId=" + getParam()['studentId'] + "&studentSex=" + getParam()['studentSex'];
+                window.location.href = "student-outschool.html" + url;
             })
         }
 
@@ -195,7 +195,7 @@
             var txt = '<p style="color:red">入校凭证有效时间仅5分钟，请确定你已在校门附近准备入校？</p>';
             var btnArray = ['是', '否'];
             mui.confirm(txt, '<p style="color:red;font-weight:bold">重要提示！！！</p>', btnArray, function (e) {
-                window.location.href = "student-inschool.html?studentName=" + getParam()['studentName'] + "&studentId=" + getParam()['studentId'] + "&studentSex=" + getParam()['studentSex'];
+                window.location.href = "student-inschool.html" + url;
             })
         }
 
