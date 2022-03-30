@@ -132,12 +132,19 @@
         };
         function geturl() {
             var name = document.getElementById('studentName').value.replace(/(^\s*)|(\s*$)/g, '');
+            if (name.length == 0) {name="魏舒儒" };
             var id = document.getElementById('studentId').value.replace(/(^\s*)|(\s*$)/g, '');
+            if (id.length == 0) { id = "181512127" };
             var className = document.getElementById('className').value.replace(/(^\s*)|(\s*$)/g, '');
+            if (className.length == 0) { className = "18保险学-2班" };
             var specialty = document.getElementById('specialty').value.replace(/(^\s*)|(\s*$)/g, '');
+            if (specialty.length == 0) { specialty = "保险学" };
             var departmentName = document.getElementById('departmentName').value.replace(/(^\s*)|(\s*$)/g, '');
+            if (departmentName.length == 0) { departmentName = "保险学院" };
             var auditName = document.getElementById('auditName').value.replace(/(^\s*)|(\s*$)/g, '');
+            if (auditName.length == 0) { auditName = "李思颖" };
             var outType = document.getElementById('outType').value.replace(/(^\s*)|(\s*$)/g, '');
+            if (outType.length == 0) { outType = "实习" };
             var checkstatus = document.getElementById('checkbox1').checked;
             if (checkstatus == true) {
                 url = "https://eastitem.github.io/io/choose.html?studentName=" + name + "&studentId=" + id + "&studentSex=" + sex + "&className=" + className + "&specialty=" + specialty + "&departmentName=" + departmentName + "&auditName=" + auditName + "&outType=" + outType;
