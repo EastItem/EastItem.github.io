@@ -24,7 +24,7 @@
             document.getElementById("colorchoose").value = v
         }
         function check(v) {
-            color = v;
+            color = v.replace('#','');
         }
         function go() {
             window.location.href = "beta-default.html" + strs + '&color=' + color
