@@ -120,8 +120,8 @@
     <script src="js/common.js"></script>
 
     <script>
+        var url = location.search; //获取url中"?"符后的字串
         function getParam() {
-            var url = location.search; //获取url中"?"符后的字串
             var info = new Object();
             if (url.indexOf("?") != -1) {
                 var str = url.substr(1);
