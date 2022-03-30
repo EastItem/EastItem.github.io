@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="GBK">
+    <title>颜色选择</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <style>
+        td {
+            border: 1px solid #c6cede;
+            border-collapse: collapse;
+            padding: 7px;
+        }
+    </style>
+    <script>
+        var color = "#000000";
+        var strs = location.search; //获取url中"?"符后的字串
+        function change(v) {
+            document.getElementById("colorout").bgColor = v
+            document.getElementById("colorchoose").value=v
+        }
+        function check(v) {
+            color = v;
+        }
+        function go() {
+            window.location.href = "beta-default.html?" + strs+'&color='+color
+        }
+    </script>
+</head>
+
+<body>
+    <section class="aui-flexView">
+        <header class="aui-navBar aui-navBar-fixed">
+            <div class="aui-center">
+                <span class="aui-center-title">颜色选择</span>
+            </div>
+        </header>
+        <section class="aui-scrollView">
+            <div class="aui-code-box" id="content">
+                <form action="">
+                    <p class="aui-code-line">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                                <tr style="height:100px">
+                                    <th style="border: 1px solid #f5f5f5; background-color: cyan;">选择</th>
+                                    <th style="border: 1px solid #f5f5f5; background-color: cyan;">中文名</th>
+                                    <th style="border: 1px solid #f5f5f5; background-color: cyan;">代码</th>
+                                    <th style="border: 1px solid #f5f5f5; background-color: cyan;">颜色</th>
+                                </tr>
+                                <tr style="height:100px">
+                                    <td><input name="bgcolor" type="radio" value="#000000" onclick="check(this.value)"></td>
+                                    <td>黑色</td>
+                                    <td class="bgtxt">#000000</td>
+                                    <td class="cursor" bgcolor="#000000"></td>
+                                </tr>
+                                <tr style="height:100px">
+                                    <td><input name="bgcolor" type="radio" value="#007C00" onclick="check(this.value)"></td>
+                                    <td>深绿红</td>
+                                    <td class="bgtxt">#007C00</td>
+                                    <td class="cursor" bgcolor="#007C00"></td>
+                                </tr>
+                                <tr style="height:100px">
+                                    <td><input name="bgcolor" type="radio" value="#8B2BE4" onclick="check(this.value)"></td>
+                                    <td>紫色</td>
+                                    <td class="bgtxt">#8B2BE4</td>
+                                    <td class="cursor" bgcolor="#8B2BE4"></td>
+                                </tr>
+                                <tr style="height:100px">
+                                    <td><input name="bgcolor" type="radio"  value="#6D9B9E" onclick="check(this.value)"></td>
+                                    <td>绿灰色</td>
+                                    <td class="bgtxt">#6D9B9E</td>
+                                    <td class="cursor" bgcolor="#6D9B9E"></td>
+                                </tr>
+                                <tr style="height:100px">
+                                    <td><input name="bgcolor" type="radio" value="#0000FF" onclick="check(this.value)"></td>
+                                    <td>深蓝色</td>
+                                    <td class="bgtxt">#0000FF</td>
+                                    <td class="cursor" bgcolor="#0000FF"></td>
+                                </tr>
+                                <tr style="height:100px">
+                                    <td><input name="bgcolor" type="radio" value="#731279" onclick="check(this.value)"></td>
+                                    <td>深紫色</td>
+                                    <td class="bgtxt">#731279</td>
+                                    <td class="cursor" bgcolor="#731279"></td>
+                                </tr>
+                                <tr style="height:100px">
+                                    <td><input name="bgcolor" type="radio" id ="colorchoose"value="#fff"  onclick="check(this.value)"></td>
+                                    <td>自选</td>
+                                    <td> <input type="text" class="aui-code-line-input" placeholder="如果勾选自选请输入颜色"style="width:100%;height:100%" id="colorinput" onchange="change(this.value)"/></td>
+                                    <td class="coloroutput" bgcolor="#fff" id="colorout"></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                   
+
+
+
+                        <div class="aui-code-btn">
+                            <button type="button" onClick="go()" id="bt1">进入页面</button>
+                        </div>
+</form>
+            </div>
+        </section>
+    </section>
+
+   
+</body>
+
+</html>
