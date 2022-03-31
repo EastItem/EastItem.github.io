@@ -20,6 +20,7 @@
         }
     </style>
     <script src="js/jquery.js"></script>
+    <script src="js/index.js"></script>
 </head>
 <body>
 
@@ -69,7 +70,7 @@
             </div>
             <div class="color-hex">#9BCE35</div>
         </div>
-        
+
         <div class="color" style="background-color: #000000" id="colorout">
             <div class="right" style="width: 100%; display: none; text-align: center;">
                 <div class="check-style-unequal-width"></div>
@@ -78,6 +79,14 @@
                 <input type="text" placeholder="输入颜色" style="BACKGROUND-COLOR: transparent; font-size: 24px; height: 100%; color: #ffffff; " id="colorinput" onchange="change(this.value)" />
             </div>
         </div>
+
+        <div class="color" style="background-color: powderblue">
+            <div class="right" style="width: 100%; display: none; text-align: center;">
+                <div class="check-style-unequal-width"></div>
+            </div>
+            <div class="color-hex" id="picktip">代码速查</div>
+        </div>
+
         <div class="color" style="background-color: palevioletred" id="colorout">
             <div class="color-hex">进入页面</div>
         </div>
@@ -86,11 +95,20 @@
 
         var color = "000000";
         var strs = location.search; //获取url中"?"符后的字串
+            
 
+
+
+
+        
 
         $(".color").click(function () {
             if ($(this).children(".color-hex").text() == '进入页面') {
                 go();
+                return;
+            }
+            if ($(this).children(".color-hex").text() == '代码速查') {
+                window.location.href = "color.html";
                 return;
             }
             color = $(this).children(".color-hex").text();
