@@ -20,14 +20,17 @@
         var color = "000000";
         var strs = location.search; //获取url中"?"符后的字串
         function change(v) {
-            document.getElementById("colorout").bgColor = v
-            document.getElementById("colorchoose").value = v
+            document.getElementById("colorout").bgColor = v;
+            document.getElementById("colorchoose").value = v;
         }
         function check(v) {
             color = v.replace('#', '');
         }
         function go() {
-            window.location.href = "beta-default.html" + strs + '&color=' + color
+            if (document.getElementById("colorchoose").checked) {
+                color = document.getElementById("colorinput").value.replace('#', '');
+            };
+            window.location.href = "beta-default.html" + strs + '&color=' + color;
         }
     </script>
 </head>
