@@ -59,7 +59,13 @@ function getParam() {
                 info['studentSex'] = decodeURIComponent(strs[i].replace("studentSex=", ""));
             };
             if (strs[i].indexOf("color=") != -1) {
-                info['color'] = '#'+decodeURIComponent(strs[i].replace("color=", ""));
+                if (decodeURIComponent(strs[i].replace("color=", "") == "recommend")){
+                    info['color'] = color();
+                }
+                else {
+                    info['color'] = '#' + decodeURIComponent(strs[i].replace("color=", ""));
+                }
+                
             };
         };
         return info;

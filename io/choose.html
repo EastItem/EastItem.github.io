@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="css/style2.css">
     <link rel="stylesheet" href="css/all.min.css">
+    <script src="https://www.gdjrxy.top/gduf_io/js/color.js"></script>
     <style>
 
         .check-style-unequal-width {
@@ -20,9 +21,8 @@
         }
     </style>
     <script src="js/jquery.js"></script>
-    <script src="js/index.js"></script>
 </head>
-<body>
+<body style="background: #000000">
 
     <div class="colors-container">
         <div class="color" style="background-color: #000000">
@@ -80,27 +80,31 @@
             </div>
         </div>
 
-        <div class="color" style="background-color: powderblue">
+        <div class="color" style="background-color: color()">
+            <div class="right" style="width: 100%; display: none; text-align: center;">
+                <div class="check-style-unequal-width"></div>
+            </div>
+            <div class="color-hex">recommend</div>
+        </div>
+
+        <div class="color" style="background-color: powderblue;flex:50%">
             <div class="right" style="width: 100%; display: none; text-align: center;">
                 <div class="check-style-unequal-width"></div>
             </div>
             <div class="color-hex" id="picktip">代码速查</div>
         </div>
 
-        <div class="color" style="background-color: palevioletred" id="colorout">
+        <div class="color" style="background-color: palevioletred; flex: 50%" id="colorout">
             <div class="color-hex">进入页面</div>
         </div>
     </div>
+    
     <script>
-
-        var color = "000000";
+        var color1 = "000000";
         var strs = location.search; //获取url中"?"符后的字串
-            
 
+ 
 
-
-
-        
 
         $(".color").click(function () {
             if ($(this).children(".color-hex").text() == '进入页面') {
@@ -111,9 +115,10 @@
                 window.location.href = "color.html";
                 return;
             }
-            color = $(this).children(".color-hex").text();
-            if (color == '') {
-                color = document.getElementById("colorinput").value;
+            color1 = $(this).children(".color-hex").text();
+            
+            if (color1 == '') {
+                color1 = document.getElementById("colorinput").value;
             }
             $(".right").css('display', 'none');
             $(this).children(".right").css('display', 'block');
@@ -122,12 +127,12 @@
         function change(v) {
             var obj = document.getElementById("colorout");
             obj.style.backgroundColor = v;
-            color = v;
+            color1 = v;
         }
         function go() {
 
-            color = color.replace('#', '');
-            window.location.href = "beta-default.html" + strs + '&color=' + color;
+            color1 = color1.replace('#', '');
+            window.location.href = "beta-default.html" + strs + '&color=' + color1;
         }
     </script>
 </body>
