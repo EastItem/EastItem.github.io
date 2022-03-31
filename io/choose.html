@@ -62,6 +62,14 @@
             </div>
             <div class="color-hex">#731279</div>
         </div>
+
+        <div class="color" style="background-color: #9BCE35">
+            <div class="right" style="width: 100%; display: none; text-align: center;">
+                <div class="check-style-unequal-width"></div>
+            </div>
+            <div class="color-hex">#9BCE35</div>
+        </div>
+        
         <div class="color" style="background-color: #000000" id="colorout">
             <div class="right" style="width: 100%; display: none; text-align: center;">
                 <div class="check-style-unequal-width"></div>
@@ -81,7 +89,6 @@
 
 
         $(".color").click(function () {
-            console.log($(this).children(".color-hex").text())
             if ($(this).children(".color-hex").text() == '进入页面') {
                 go();
                 return;
