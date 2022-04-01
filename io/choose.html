@@ -22,7 +22,7 @@
     </style>
     <script src="js/jquery.js"></script>
 </head>
-<body style="background: #000000">
+<body >
 
     <div class="colors-container">
         <div class="color" style="background-color: #000000">
@@ -71,7 +71,7 @@
             <div class="color-hex">#9BCE35</div>
         </div>
 
-        <div class="color" style="background-color: #000000" id="colorout">
+        <div class="color" style="background-color: Orange" id="colorout">
             <div class="right" style="width: 100%; display: none; text-align: center;">
                 <div class="check-style-unequal-width"></div>
             </div>
@@ -80,7 +80,7 @@
             </div>
         </div>
 
-        <div class="color" style="background-color: color()">
+        <div class="color" id="REcolor" >
             <div class="right" style="width: 100%; display: none; text-align: center;">
                 <div class="check-style-unequal-width"></div>
             </div>
@@ -102,8 +102,9 @@
     <script>
         var color1 = "000000";
         var strs = location.search; //获取url中"?"符后的字串
+        
+        document.getElementById("REcolor").style.backgroundColor = color();
 
- 
 
 
         $(".color").click(function () {
