@@ -60,7 +60,7 @@ function getParam() {
             };
             if (strs[i].indexOf("color=") != -1) {
                 if (decodeURIComponent(strs[i].replace("color=", "") == "recommend")){
-                    info['color'] = color();
+                    info['color'] = "blue";
                 }
                 else {
                     info['color'] = '#' + decodeURIComponent(strs[i].replace("color=", ""));
