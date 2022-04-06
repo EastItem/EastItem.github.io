@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>选择颜色</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/style2.css">
@@ -25,73 +25,64 @@
 <body >
 
     <div class="colors-container">
-        <div class="color" style="background-color: #000000">
+        <div class="color" style="background-color: black">
 
             <div class="right" style="width:100%;   text-align: center;">
                 <div class="check-style-unequal-width"></div>
             </div>
 
-            <div class="color-hex">#000000</div>
+            <div class="color-hex">black</div>
         </div>
-        <div class="color" style="background-color: #007C00">
+        <div class="color" style="background-color: green">
             <div class="right" style="width:100%; display:none;   text-align: center;">
                 <div class="check-style-unequal-width"></div>
             </div>
-            <div class="color-hex">#007C00</div>
+            <div class="color-hex">green</div>
         </div>
-        <div class="color" style="background-color: #8B2BE4">
+        <div class="color" style="background-color: purple">
             <div class="right" style="width: 100%; display: none; text-align: center;">
                 <div class="check-style-unequal-width"></div>
             </div>
-            <div class="color-hex">#8B2BE4</div>
+            <div class="color-hex">purple</div>
         </div>
-        <div class="color" style="background-color: #6D9B9E">
+        <div class="color" style="background-color: blueviolet">
             <div class="right" style="width: 100%; display: none; text-align: center;">
                 <div class="check-style-unequal-width"></div>
             </div>
-            <div class="color-hex">#6D9B9E</div>
+            <div class="color-hex">blueviolet</div>
         </div>
-        <div class="color" style="background-color: #0000FF">
+        <div class="color" style="background-color: blue">
             <div class="right" style="width: 100%; display: none; text-align: center;">
                 <div class="check-style-unequal-width"></div>
             </div>
-            <div class="color-hex">#0000FF</div>
+            <div class="color-hex">blue</div>
         </div>
-        <div class="color" style="background-color: #731279">
+        <div class="color" style="background-color: cadetblue">
             <div class="right" style="width: 100%; display: none; text-align: center;">
                 <div class="check-style-unequal-width"></div>
             </div>
-            <div class="color-hex">#731279</div>
-        </div>
-
-        <div class="color" style="background-color: #9BCE35">
-            <div class="right" style="width: 100%; display: none; text-align: center;">
-                <div class="check-style-unequal-width"></div>
-            </div>
-            <div class="color-hex">#9BCE35</div>
+            <div class="color-hex">cadetblue</div>
         </div>
 
-        <div class="color" style="background-color: Orange" id="colorout">
+        <div class="color" style="background-color: cyan">
             <div class="right" style="width: 100%; display: none; text-align: center;">
                 <div class="check-style-unequal-width"></div>
             </div>
-            <div class="color-hex">
-                <input type="text" placeholder="输入颜色" style="BACKGROUND-COLOR: transparent; font-size: 24px; height: 100%; color: #ffffff; " id="colorinput" onchange="change(this.value)" />
-            </div>
+            <div class="color-hex">cyan</div>
         </div>
 
-        <div class="color" id="REcolor" >
+        <div class="color" style="background-color: greenyellow">
             <div class="right" style="width: 100%; display: none; text-align: center;">
                 <div class="check-style-unequal-width"></div>
             </div>
-            <div class="color-hex">recommend暂停用</div>
+            <div class="color-hex">greenyellow</div>
         </div>
 
         <div class="color" style="background-color: powderblue;flex:50%">
             <div class="right" style="width: 100%; display: none; text-align: center;">
                 <div class="check-style-unequal-width"></div>
             </div>
-            <div class="color-hex" id="picktip">代码速查</div>
+            <div class="color-hex" id="picktip">更多颜色</div>
         </div>
 
         <div class="color" style="background-color: palevioletred; flex: 50%" id="colorout">
@@ -103,36 +94,22 @@
         var color1 = "000000";
         var strs = location.search; //获取url中"?"符后的字串
         
-        document.getElementById("REcolor").style.backgroundColor = "blue";
-
-
 
         $(".color").click(function () {
             if ($(this).children(".color-hex").text() == '进入页面') {
                 go();
                 return;
             }
-            if ($(this).children(".color-hex").text() == '代码速查') {
-                window.location.href = "color.html";
+            if ($(this).children(".color-hex").text() == '更多颜色') {
+                window.location.href = "color.html" + strs;
                 return;
             }
             color1 = $(this).children(".color-hex").text();
-            
-            if (color1 == '') {
-                color1 = document.getElementById("colorinput").value;
-            }
+         
             $(".right").css('display', 'none');
             $(this).children(".right").css('display', 'block');
         });
-
-        function change(v) {
-            var obj = document.getElementById("colorout");
-            obj.style.backgroundColor = v;
-            color1 = v;
-        }
         function go() {
-
-            color1 = color1.replace('#', '');
             window.location.href = "beta-default.html" + strs + '&color=' + color1;
         }
     </script>

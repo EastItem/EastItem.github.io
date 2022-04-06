@@ -2,313 +2,73 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>全部颜色</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <style>
 
+        .check-style-unequal-width {
+            display: inline-block;
+            width: 70px;
+            height: 100px;
+            border-color: #009933;
+            border-style: solid;
+            border-width: 0 15px 10px 0;
+            transform: rotate(45deg);
+        }
+    </style>
+    <script src="js/jquery.js"></script>
 </head>
 <body>
-    <table width="100%" border="0" cellspacing="0" id="tab1">
-        <tbody>
-            <tr>
-                <td style="background-color: rgb(0, 0, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 0, 0) ;  点击预览该颜色"><span style="color: white;">#000000</span></td>
-                <td style="background-color: rgb(255, 255, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 255, 204) ;  点击预览该颜色">#FFFFCC</td>
-                <td style="background-color: rgb(153, 255, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 255, 153) ;  点击预览该颜色">#99FF99</td>
-                <td style="background-color: rgb(102, 255, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 255, 255) ;  点击预览该颜色">#66FFFF</td>
-                <td style="background-color: rgb(51, 51, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 51, 255) ;  点击预览该颜色">#3333FF</td>
-                <td style="background-color: rgb(255, 0, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 0, 255) ;  点击预览该颜色">#FF00FF</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(51, 51, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 51, 51) ;  点击预览该颜色">#333333</td>
-                <td style="background-color: rgb(255, 255, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 255, 153) ;  点击预览该颜色">#FFFF99</td>
-                <td style="background-color: rgb(102, 255, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 255, 102) ;  点击预览该颜色">#66FF66</td>
-                <td style="background-color: rgb(51, 255, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 255, 255) ;  点击预览该颜色">#33FFFF</td>
-                <td style="background-color: rgb(0, 0, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 0, 255) ;  点击预览该颜色">#0000FF</td>
-                <td style="background-color: rgb(255, 0, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 0, 204) ;  点击预览该颜色">#FF00CC</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(102, 102, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 102, 102) ;  点击预览该颜色">#666666</td>
-                <td style="background-color: rgb(255, 255, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 255, 102) ;  点击预览该颜色">#FFFF66</td>
-                <td style="background-color: rgb(51, 255, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 255, 51) ;  点击预览该颜色">#33FF33</td>
-                <td style="background-color: rgb(0, 255, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 255, 255) ;  点击预览该颜色">#00FFFF</td>
-                <td style="background-color: rgb(51, 0, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 0, 255) ;  点击预览该颜色">#3300FF</td>
-                <td style="background-color: rgb(204, 0, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 0, 153) ;  点击预览该颜色">#CC0099</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(153, 153, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 153, 153) ;  点击预览该颜色">#999999</td>
-                <td style="background-color: rgb(255, 255, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 255, 51) ;  点击预览该颜色">#FFFF33</td>
-                <td style="background-color: rgb(0, 255, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 255, 0) ;  点击预览该颜色">#00FF00</td>
-                <td style="background-color: rgb(0, 204, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 204, 255) ;  点击预览该颜色">#00CCFF</td>
-                <td style="background-color: rgb(51, 0, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 0, 204) ;  点击预览该颜色">#3300CC</td>
-                <td style="background-color: rgb(255, 51, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 51, 204) ;  点击预览该颜色">#FF33CC</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(204, 204, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 204, 204) ;  点击预览该颜色">#CCCCCC</td>
-                <td style="background-color: rgb(255, 255, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 255, 0) ;  点击预览该颜色">#FFFF00</td>
-                <td style="background-color: rgb(0, 255, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 255, 51) ;  点击预览该颜色">#00FF33</td>
-                <td style="background-color: rgb(0, 153, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 153, 204) ;  点击预览该颜色">#0099CC</td>
-                <td style="background-color: rgb(102, 51, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 51, 255) ;  点击预览该颜色">#6633FF</td>
-                <td style="background-color: rgb(153, 0, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 0, 102) ;  点击预览该颜色">#990066</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(255, 255, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 255, 255) ;  点击预览该颜色">#FFFFFF</td>
-                <td style="background-color: rgb(204, 255, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 255, 0) ;  点击预览该颜色">#CCFF00</td>
-                <td style="background-color: rgb(0, 204, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 204, 51) ;  点击预览该颜色">#00CC33</td>
-                <td style="background-color: rgb(51, 204, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 204, 255) ;  点击预览该颜色">#33CCFF</td>
-                <td style="background-color: rgb(51, 0, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 0, 153) ;  点击预览该颜色">#330099</td>
-                <td style="background-color: rgb(204, 51, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 51, 153) ;  点击预览该颜色">#CC3399</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(255, 51, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 51, 0) ;  点击预览该颜色">#FF3300</td>
-                <td style="background-color: rgb(153, 204, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 204, 0) ;  点击预览该颜色">#99CC00</td>
-                <td style="background-color: rgb(51, 255, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 255, 102) ;  点击预览该颜色">#33FF66</td>
-                <td style="background-color: rgb(0, 102, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 102, 153) ;  点击预览该颜色">#006699</td>
-                <td style="background-color: rgb(102, 51, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 51, 204) ;  点击预览该颜色">#6633CC</td>
-                <td style="background-color: rgb(255, 102, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 102, 204) ;  点击预览该颜色">#FF66CC</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(204, 51, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 51, 0) ;  点击预览该颜色">#CC3300</td>
-                <td style="background-color: rgb(204, 255, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 255, 51) ;  点击预览该颜色">#CCFF33</td>
-                <td style="background-color: rgb(0, 153, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 153, 51) ;  点击预览该颜色">#009933</td>
-                <td style="background-color: rgb(51, 153, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 153, 204) ;  点击预览该颜色">#3399CC</td>
-                <td style="background-color: rgb(153, 102, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 102, 255) ;  点击预览该颜色">#9966FF</td>
-                <td style="background-color: rgb(255, 0, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 0, 153) ;  点击预览该颜色">#FF0099</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(255, 102, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 102, 51) ;  点击预览该颜色">#FF6633</td>
-                <td style="background-color: rgb(102, 153, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 153, 0) ;  点击预览该颜色">#669900</td>
-                <td style="background-color: rgb(51, 204, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 204, 102) ;  点击预览该颜色">#33CC66</td>
-                <td style="background-color: rgb(102, 204, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 204, 255) ;  点击预览该颜色">#66CCFF</td>
-                <td style="background-color: rgb(102, 0, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 0, 255) ;  点击预览该颜色">#6600FF</td>
-                <td style="background-color: rgb(102, 0, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 0, 51) ;  点击预览该颜色">#660033</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(153, 51, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 51, 0) ;  点击预览该颜色">#993300</td>
-                <td style="background-color: rgb(153, 204, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 204, 51) ;  点击预览该颜色">#99CC33</td>
-                <td style="background-color: rgb(102, 255, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 255, 153) ;  点击预览该颜色">#66FF99</td>
-                <td style="background-color: rgb(0, 153, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 153, 255) ;  点击预览该颜色">#0099FF</td>
-                <td style="background-color: rgb(51, 0, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 0, 102) ;  点击预览该颜色">#330066</td>
-                <td style="background-color: rgb(153, 51, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 51, 102) ;  点击预览该颜色">#993366</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(204, 102, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 102, 51) ;  点击预览该颜色">#CC6633</td>
-                <td style="background-color: rgb(204, 255, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 255, 102) ;  点击预览该颜色">#CCFF66</td>
-                <td style="background-color: rgb(0, 255, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 255, 102) ;  点击预览该颜色">#00FF66</td>
-                <td style="background-color: rgb(0, 51, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 51, 102) ;  点击预览该颜色">#003366</td>
-                <td style="background-color: rgb(102, 51, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 51, 153) ;  点击预览该颜色">#663399</td>
-                <td style="background-color: rgb(204, 102, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 102, 153) ;  点击预览该颜色">#CC6699</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(255, 153, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 153, 102) ;  点击预览该颜色">#FF9966</td>
-                <td style="background-color: rgb(153, 255, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 255, 0) ;  点击预览该颜色">#99FF00</td>
-                <td style="background-color: rgb(0, 102, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 102, 51) ;  点击预览该颜色">#006633</td>
-                <td style="background-color: rgb(51, 102, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 102, 153) ;  点击预览该颜色">#336699</td>
-                <td style="background-color: rgb(153, 102, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 102, 204) ;  点击预览该颜色">#9966CC</td>
-                <td style="background-color: rgb(204, 0, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 0, 102) ;  点击预览该颜色">#CC0066</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(255, 102, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 102, 0) ;  点击预览该颜色">#FF6600</td>
-                <td style="background-color: rgb(51, 102, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 102, 0) ;  点击预览该颜色">#336600</td>
-                <td style="background-color: rgb(51, 153, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 153, 102) ;  点击预览该颜色">#339966</td>
-                <td style="background-color: rgb(102, 153, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 153, 204) ;  点击预览该颜色">#6699CC</td>
-                <td style="background-color: rgb(102, 0, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 0, 204) ;  点击预览该颜色">#6600CC</td>
-                <td style="background-color: rgb(255, 153, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 153, 204) ;  点击预览该颜色">#FF99CC</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(102, 51, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 51, 0) ;  点击预览该颜色">#663300</td>
-                <td style="background-color: rgb(102, 153, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 153, 51) ;  点击预览该颜色">#669933</td>
-                <td style="background-color: rgb(102, 204, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 204, 153) ;  点击预览该颜色">#66CC99</td>
-                <td style="background-color: rgb(0, 102, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 102, 204) ;  点击预览该颜色">#0066CC</td>
-                <td style="background-color: rgb(204, 153, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 153, 255) ;  点击预览该颜色">#CC99FF</td>
-                <td style="background-color: rgb(255, 51, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 51, 153) ;  点击预览该颜色">#FF3399</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(153, 102, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 102, 51) ;  点击预览该颜色">#996633</td>
-                <td style="background-color: rgb(153, 204, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 204, 102) ;  点击预览该颜色">#99CC66</td>
-                <td style="background-color: rgb(0, 204, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 204, 102) ;  点击预览该颜色">#00CC66</td>
-                <td style="background-color: rgb(153, 204, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 204, 255) ;  点击预览该颜色">#99CCFF</td>
-                <td style="background-color: rgb(153, 51, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 51, 255) ;  点击预览该颜色">#9933FF</td>
-                <td style="background-color: rgb(255, 0, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 0, 102) ;  点击预览该颜色">#FF0066</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(204, 153, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 153, 102) ;  点击预览该颜色">#CC9966</td>
-                <td style="background-color: rgb(102, 204, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 204, 0) ;  点击预览该颜色">#66CC00</td>
-                <td style="background-color: rgb(153, 255, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 255, 204) ;  点击预览该颜色">#99FFCC</td>
-                <td style="background-color: rgb(51, 153, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 153, 255) ;  点击预览该颜色">#3399FF</td>
-                <td style="background-color: rgb(153, 0, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 0, 255) ;  点击预览该颜色">#9900FF</td>
-                <td style="background-color: rgb(153, 0, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 0, 51) ;  点击预览该颜色">#990033</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(204, 102, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 102, 0) ;  点击预览该颜色">#CC6600</td>
-                <td style="background-color: rgb(204, 255, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 255, 153) ;  点击预览该颜色">#CCFF99</td>
-                <td style="background-color: rgb(51, 255, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 255, 153) ;  点击预览该颜色">#33FF99</td>
-                <td style="background-color: rgb(0, 102, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 102, 255) ;  点击预览该颜色">#0066FF</td>
-                <td style="background-color: rgb(102, 0, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 0, 153) ;  点击预览该颜色">#660099</td>
-                <td style="background-color: rgb(204, 51, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 51, 102) ;  点击预览该颜色">#CC3366</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(255, 204, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 204, 153) ;  点击预览该颜色">#FFCC99</td>
-                <td style="background-color: rgb(153, 255, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 255, 51) ;  点击预览该颜色">#99FF33</td>
-                <td style="background-color: rgb(0, 255, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 255, 153) ;  点击预览该颜色">#00FF99</td>
-                <td style="background-color: rgb(0, 51, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 51, 153) ;  点击预览该颜色">#003399</td>
-                <td style="background-color: rgb(153, 51, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 51, 204) ;  点击预览该颜色">#9933CC</td>
-                <td style="background-color: rgb(255, 102, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 102, 153) ;  点击预览该颜色">#FF6699</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(255, 153, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 153, 51) ;  点击预览该颜色">#FF9933</td>
-                <td style="background-color: rgb(102, 255, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 255, 0) ;  点击预览该颜色">#66FF00</td>
-                <td style="background-color: rgb(0, 153, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 153, 102) ;  点击预览该颜色">#009966</td>
-                <td style="background-color: rgb(51, 102, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 102, 204) ;  点击预览该颜色">#3366CC</td>
-                <td style="background-color: rgb(204, 102, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 102, 255) ;  点击预览该颜色">#CC66FF</td>
-                <td style="background-color: rgb(204, 0, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 0, 51) ;  点击预览该颜色">#CC0033</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(255, 153, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 153, 0) ;  点击预览该颜色">#FF9900</td>
-                <td style="background-color: rgb(51, 153, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 153, 0) ;  点击预览该颜色">#339900</td>
-                <td style="background-color: rgb(51, 204, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 204, 153) ;  点击预览该颜色">#33CC99</td>
-                <td style="background-color: rgb(102, 153, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 153, 255) ;  点击预览该颜色">#6699FF</td>
-                <td style="background-color: rgb(153, 0, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 0, 204) ;  点击预览该颜色">#9900CC</td>
-                <td style="background-color: rgb(255, 51, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 51, 102) ;  点击预览该颜色">#FF3366</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(153, 102, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 102, 0) ;  点击预览该颜色">#996600</td>
-                <td style="background-color: rgb(102, 204, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 204, 51) ;  点击预览该颜色">#66CC33</td>
-                <td style="background-color: rgb(102, 255, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 255, 204) ;  点击预览该颜色">#66FFCC</td>
-                <td style="background-color: rgb(0, 51, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 51, 204) ;  点击预览该颜色">#0033CC</td>
-                <td style="background-color: rgb(204, 51, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 51, 255) ;  点击预览该颜色">#CC33FF</td>
-                <td style="background-color: rgb(255, 0, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 0, 51) ;  点击预览该颜色">#FF0033</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(204, 153, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 153, 51) ;  点击预览该颜色">#CC9933</td>
-                <td style="background-color: rgb(153, 255, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 255, 102) ;  点击预览该颜色">#99FF66</td>
-                <td style="background-color: rgb(0, 204, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 204, 153) ;  点击预览该颜色">#00CC99</td>
-                <td style="background-color: rgb(51, 102, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 102, 255) ;  点击预览该颜色">#3366FF</td>
-                <td style="background-color: rgb(204, 0, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 0, 255) ;  点击预览该颜色">#CC00FF</td>
-                <td style="background-color: rgb(51, 0, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 0, 0) ;  点击预览该颜色">#330000</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(255, 204, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 204, 102) ;  点击预览该颜色">#FFCC66</td>
-                <td style="background-color: rgb(51, 204, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 204, 0) ;  点击预览该颜色">#33CC00</td>
-                <td style="background-color: rgb(51, 255, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 255, 204) ;  点击预览该颜色">#33FFCC</td>
-                <td style="background-color: rgb(0, 51, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 51, 255) ;  点击预览该颜色">#0033FF</td>
-                <td style="background-color: rgb(51, 0, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 0, 51) ;  点击预览该颜色">#330033</td>
-                <td style="background-color: rgb(102, 51, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 51, 51) ;  点击预览该颜色">#663333</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(204, 153, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 153, 0) ;  点击预览该颜色">#CC9900</td>
-                <td style="background-color: rgb(102, 255, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 255, 51) ;  点击预览该颜色">#66FF33</td>
-                <td style="background-color: rgb(0, 255, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 255, 204) ;  点击预览该颜色">#00FFCC</td>
-                <td style="background-color: rgb(0, 0, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 0, 51) ;  点击预览该颜色"><span style="color:#FFFFFF">#000033</span></td>
-                <td style="background-color: rgb(102, 51, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 51, 102) ;  点击预览该颜色">#663366</td>
-                <td style="background-color: rgb(102, 0, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 0, 0) ;  点击预览该颜色">#660000</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(255, 204, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 204, 51) ;  点击预览该颜色">#FFCC33</td>
-                <td style="background-color: rgb(51, 255, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 255, 0) ;  点击预览该颜色">#33FF00</td>
-                <td style="background-color: rgb(0, 51, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 51, 51) ;  点击预览该颜色">#003333</td>
-                <td style="background-color: rgb(51, 51, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 51, 102) ;  点击预览该颜色">#333366</td>
-                <td style="background-color: rgb(102, 0, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 0, 102) ;  点击预览该颜色">#660066</td>
-                <td style="background-color: rgb(153, 102, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 102, 102) ;  点击预览该颜色">#996666</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(255, 204, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 204, 0) ;  点击预览该颜色">#FFCC00</td>
-                <td style="background-color: rgb(0, 51, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 51, 0) ;  点击预览该颜色">#003300</td>
-                <td style="background-color: rgb(51, 102, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 102, 102) ;  点击预览该颜色">#336666</td>
-                <td style="background-color: rgb(0, 0, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 0, 102) ;  点击预览该颜色"><span style="color:#FFFFFF">#000066</span></td>
-                <td style="background-color: rgb(153, 102, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 102, 153) ;  点击预览该颜色">#996699</td>
-                <td style="background-color: rgb(153, 51, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 51, 51) ;  点击预览该颜色">#993333</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(51, 51, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 51, 0) ;  点击预览该颜色">#333300</td>
-                <td style="background-color: rgb(51, 102, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 102, 51) ;  点击预览该颜色">#336633</td>
-                <td style="background-color: rgb(0, 102, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 102, 102) ;  点击预览该颜色">#006666</td>
-                <td style="background-color: rgb(102, 102, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 102, 153) ;  点击预览该颜色">#666699</td>
-                <td style="background-color: rgb(153, 51, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 51, 153) ;  点击预览该颜色">#993399</td>
-                <td style="background-color: rgb(153, 0, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 0, 0) ;  点击预览该颜色">#990000</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(102, 102, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 102, 51) ;  点击预览该颜色">#666633</td>
-                <td style="background-color: rgb(0, 102, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 102, 0) ;  点击预览该颜色">#006600</td>
-                <td style="background-color: rgb(102, 153, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 153, 153) ;  点击预览该颜色">#669999</td>
-                <td style="background-color: rgb(51, 51, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 51, 153) ;  点击预览该颜色">#333399</td>
-                <td style="background-color: rgb(153, 0, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 0, 153) ;  点击预览该颜色">#990099</td>
-                <td style="background-color: rgb(204, 153, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 153, 153) ;  点击预览该颜色">#CC9999</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(102, 102, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 102, 0) ;  点击预览该颜色">#666600</td>
-                <td style="background-color: rgb(102, 153, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 153, 102) ;  点击预览该颜色">#669966</td>
-                <td style="background-color: rgb(51, 153, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 153, 153) ;  点击预览该颜色">#339999</td>
-                <td style="background-color: rgb(0, 0, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 0, 153) ;  点击预览该颜色"><span style="color:#FFFFFF">#000099</span></td>
-                <td style="background-color: rgb(204, 153, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 153, 204) ;  点击预览该颜色">#CC99CC</td>
-                <td style="background-color: rgb(204, 102, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 102, 102) ;  点击预览该颜色">#CC6666</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(153, 153, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 153, 102) ;  点击预览该颜色">#999966</td>
-                <td style="background-color: rgb(51, 153, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 153, 51) ;  点击预览该颜色">#339933</td>
-                <td style="background-color: rgb(0, 153, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 153, 153) ;  点击预览该颜色">#009999</td>
-                <td style="background-color: rgb(153, 153, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 153, 204) ;  点击预览该颜色">#9999CC</td>
-                <td style="background-color: rgb(204, 102, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 102, 204) ;  点击预览该颜色">#CC66CC</td>
-                <td style="background-color: rgb(204, 51, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 51, 51) ;  点击预览该颜色">#CC3333</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(153, 153, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 153, 51) ;  点击预览该颜色">#999933</td>
-                <td style="background-color: rgb(0, 153, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 153, 0) ;  点击预览该颜色">#009900</td>
-                <td style="background-color: rgb(153, 204, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 204, 204) ;  点击预览该颜色">#99CCCC</td>
-                <td style="background-color: rgb(102, 102, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 102, 204) ;  点击预览该颜色">#6666CC</td>
-                <td style="background-color: rgb(204, 51, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 51, 204) ;  点击预览该颜色">#CC33CC</td>
-                <td style="background-color: rgb(204, 0, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 0, 0) ;  点击预览该颜色">#CC0000</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(153, 153, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 153, 0) ;  点击预览该颜色">#999900</td>
-                <td style="background-color: rgb(153, 204, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 204, 153) ;  点击预览该颜色">#99CC99</td>
-                <td style="background-color: rgb(102, 204, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 204, 204) ;  点击预览该颜色">#66CCCC</td>
-                <td style="background-color: rgb(51, 51, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 51, 204) ;  点击预览该颜色">#3333CC</td>
-                <td style="background-color: rgb(204, 0, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 0, 204) ;  点击预览该颜色">#CC00CC</td>
-                <td style="background-color: rgb(255, 204, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 204, 204) ;  点击预览该颜色">#FFCCCC</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(204, 204, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 204, 153) ;  点击预览该颜色">#CCCC99</td>
-                <td style="background-color: rgb(102, 204, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 204, 102) ;  点击预览该颜色">#66CC66</td>
-                <td style="background-color: rgb(51, 204, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 204, 204) ;  点击预览该颜色">#33CCCC</td>
-                <td style="background-color: rgb(0, 0, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 0, 204) ;  点击预览该颜色">#0000CC</td>
-                <td style="background-color: rgb(255, 204, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 204, 255) ;  点击预览该颜色">#FFCCFF</td>
-                <td style="background-color: rgb(255, 153, 153); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 153, 153) ;  点击预览该颜色">#FF9999</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(204, 204, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 204, 102) ;  点击预览该颜色">#CCCC66</td>
-                <td style="background-color: rgb(51, 204, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(51, 204, 51) ;  点击预览该颜色">#33CC33</td>
-                <td style="background-color: rgb(0, 204, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 204, 204) ;  点击预览该颜色">#00CCCC</td>
-                <td style="background-color: rgb(204, 204, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 204, 255) ;  点击预览该颜色">#CCCCFF</td>
-                <td style="background-color: rgb(255, 153, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 153, 255) ;  点击预览该颜色">#FF99FF</td>
-                <td style="background-color: rgb(255, 102, 102); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 102, 102) ;  点击预览该颜色">#FF6666</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(204, 204, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 204, 51) ;  点击预览该颜色">#CCCC33</td>
-                <td style="background-color: rgb(0, 204, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(0, 204, 0) ;  点击预览该颜色">#00CC00</td>
-                <td style="background-color: rgb(204, 255, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 255, 255) ;  点击预览该颜色">#CCFFFF</td>
-                <td style="background-color: rgb(153, 153, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 153, 255) ;  点击预览该颜色">#9999FF</td>
-                <td style="background-color: rgb(255, 102, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 102, 255) ;  点击预览该颜色">#FF66FF</td>
-                <td style="background-color: rgb(255, 51, 51); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 51, 51) ;  点击预览该颜色">#FF3333</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(204, 204, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 204, 0) ;  点击预览该颜色">#CCCC00</td>
-                <td style="background-color: rgb(204, 255, 204); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(204, 255, 204) ;  点击预览该颜色">#CCFFCC</td>
-                <td style="background-color: rgb(153, 255, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(153, 255, 255) ;  点击预览该颜色">#99FFFF</td>
-                <td style="background-color: rgb(102, 102, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(102, 102, 255) ;  点击预览该颜色">#6666FF</td>
-                <td style="background-color: rgb(255, 51, 255); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 51, 255) ;  点击预览该颜色">#FF33FF</td>
-                <td style="background-color: rgb(255, 0, 0); font: 10pt &quot;Courier New&quot;, monospace; padding: 6px 1px;" title="颜色值:rgb(255, 0, 0) ;  点击预览该颜色">#FF0000</td>
-            </tr>
-        </tbody>
-    </table>
 
-    <div class="aui-code-box">
-    <button type="button" onClick="back()">返回</button>
+    <div class="colors-container" id="allcolor">
+
     </div>
+
+    <div class="color" style="background-color: black;" id="colorout">
+        <div class="color-hex">返回</div>
+    </div>
+    <div class="color" style="background-color: palevioletred;" id="colorout">
+        <div class="color-hex">进入页面</div>
+    </div>
+
 </body>
 
 </html>
 <script>
-    function back() {
-        history.go(-1);
-}
+    var list = ['aliceblue', 'antiquewhite', 'aqua', 'aquamarine', 'azure', 'beige', 'bisque', 'black', 'blanchedalmond', 'blue', 'blueviolet', 'brown', 'burlywood', 'cadetblue', 'chartreuse', 'chocolate', 'coral', 'cornflowerblue', 'cornsilk', 'crimson', 'cyan', 'darkblue', 'darkcyan', 'darkgoldenrod', 'darkgray', 'darkgreen', 'darkgrey', 'darkkhaki', 'darkmagenta', 'darkolivegreen', 'darkorange', 'darkorchid', 'darkred', 'darksalmon', 'darkseagreen', 'darkslateblue', 'darkslategray', 'darkslategrey', 'darkturquoise', 'darkviolet', 'deeppink', 'deepskyblue', 'dimgray', 'dimgrey', 'dodgerblue', 'firebrick', 'floralwhite', 'forestgreen', 'fuchsia', 'gainsboro', 'ghostwhite', 'gold', 'goldenrod', 'gray', 'green', 'greenyellow', 'grey', 'honeydew', 'hotpink', 'indianred', 'indigo', 'ivory', 'khaki', 'lavender', 'lavenderblush', 'lawngreen', 'lemonchiffon', 'lightblue', 'lightcoral', 'lightcyan', 'lightgoldenrodyellow', 'lightgray', 'lightgreen', 'lightgrey', 'lightpink', 'lightsalmon', 'lightseagreen', 'lightskyblue', 'lightslategray', 'lightslategrey', 'lightsteelblue', 'lightyellow', 'lime', 'limegreen', 'linen', 'magenta', 'maroon', 'mediumaquamarine', 'mediumblue', 'mediumorchid', 'mediumpurple', 'mediumseagreen', 'mediumslateblue', 'mediumspringgreen', 'mediumturquoise', 'mediumvioletred', 'midnightblue', 'mintcream', 'mistyrose', 'moccasin', 'navajowhite', 'navy', 'oldlace', 'olive', 'olivedrab', 'orange', 'orangered', 'orchid', 'palegoldenrod', 'palegreen', 'paleturquoise', 'palevioletred', 'papayawhip', 'peachpuff', 'peru', 'pink', 'plum', 'powderblue', 'purple', 'red', 'rosybrown', 'royalblue', 'saddlebrown', 'salmon', 'sandybrown', 'seagreen', 'seashell', 'sienna', 'silver', 'skyblue', 'slateblue', 'slategray', 'slategrey', 'snow', 'springgreen', 'steelblue', 'tan', 'teal', 'thistle', 'tomato', 'turquoise', 'violet', 'wheat', 'white', 'whitesmoke', 'yellow', 'yellowgreen'];
+
+    for (var i = 0; i < list.length; i++){
+        document.getElementById("allcolor").innerHTML += '<div class="color" style="background-color:'+list[i]+';flex:33.3%">\
+                <div class="right" style="width:100%; display: none;  text-align: center;">\
+                    <div class="check-style-unequal-width"></div>\
+                </div>\
+                <div class="color-hex">'+ list[i] +'</div>\
+            </div>'
+        
+    }
+ 
+    var color1 = "000000";
+    var strs = location.search; //获取url中"?"符后的字串
+
+
+    $(".color").click(function () {
+        if ($(this).children(".color-hex").text() == '进入页面') {
+            go();
+            return;
+        }
+        if ($(this).children(".color-hex").text() == '返回') {
+            history.go(-1);
+            return;
+        }
+        color1 = $(this).children(".color-hex").text();
+
+        $(".right").css('display', 'none');
+        $(this).children(".right").css('display', 'block');
+    });
+    function go() {
+        window.location.href = "beta-default.html" + strs + '&color=' + color1;
+    }
+
 </script>
